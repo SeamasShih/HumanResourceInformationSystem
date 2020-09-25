@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>D:\AU trip\UTAS\course\IT\KIT506\Tutorial\Module08\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -63,6 +66,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EntityClasses\Campus.cs" />
+    <Compile Include="EntityClasses\Class.cs" />
+    <Compile Include="EntityClasses\Unit.cs" />
+    <Compile Include="EntityClasses\UnitType.cs" />
+    <Compile Include="EntityClasses\Weekday.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
