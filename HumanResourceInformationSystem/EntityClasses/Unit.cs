@@ -11,7 +11,5 @@ namespace HumanResourceInformationSystem.EntityClasses
         public string Code { private set; get; }
         public string Title { private set; get; }
         public int Coordinator { private set; get; }
-
-        public int Co { private set; get; }
     }
 }
