@@ -27,19 +27,28 @@
         <CheckBox Content="DC" HorizontalAlignment="Left" Height="19" Margin="21,157,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="21,181,0,0" TextWrapping="Wrap" Text="Staff List" VerticalAlignment="Top" Width="187" FontSize="16" TextAlignment="Center" FontStyle="Italic"/>
         <ListBox HorizontalAlignment="Left" Height="216" Margin="10,206,0,0" VerticalAlignment="Top" Width="208" Background="#FF828282" SelectionChanged="ListBox_SelectionChanged_1"/>
-        <TextBlock Height="52.596" Margin="360.67,10,0,0" TextWrapping="Wrap" Text="Staff Detail" VerticalAlignment="Top" Width="337.673" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="144.43" Margin="262.814,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="522.186"/>
-        <Ellipse HorizontalAlignment="Left" Height="102" Margin="284.866,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="96.477">
+        <TextBlock Height="52.596" Margin="360.67,-1.973,0,0" TextWrapping="Wrap" Text="Staff Detail" VerticalAlignment="Top" Width="337.673" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="154" Margin="262.814,47,0,0" Stroke="Black" VerticalAlignment="Top" Width="522.186"/>
+        <Ellipse HorizontalAlignment="Left" Height="102" Margin="305.866,69,0,0" Stroke="Black" VerticalAlignment="Top" Width="96.477">
             <Ellipse.Fill>
                 <ImageBrush TileMode="FlipX" ImageSource="WX20200927-164148@2x.png"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="399.261,99,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="136.447"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="399.261,138,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="115.773"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="399.261,168.813,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="115.773"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="399.261,193.813,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="115.773"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="582.57,138,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="115.773"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="399.261,138,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="115.773"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,55,0,0" TextWrapping="Wrap" Text="Name: James Bond" VerticalAlignment="Top" Width="220.447" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,104,0,0" TextWrapping="Wrap" Text="Room Location: 710A" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,128,0,0" TextWrapping="Wrap" Text="Phone Number: 0405XXXXXX" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,152,0,0" TextWrapping="Wrap" Text="Email: Bond.James@utas.edu.au" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,176,0,0" TextWrapping="Wrap" Text="Consultation Time: 9:00-11:00 Monday" VerticalAlignment="Top" Width="268.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,81.38,0,0" TextWrapping="Wrap" Text="Campus: Hobart" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="33.75" Margin="402.343,206,0,0" TextWrapping="Wrap" Text="Participated Courses" VerticalAlignment="Top" Width="259.365" FontSize="20" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="33.75" Margin="402.343,312,0,0" TextWrapping="Wrap" Text="Timetable View" VerticalAlignment="Top" Width="259.365" FontSize="20" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
+        <Grid HorizontalAlignment="Left" Height="67.25" Margin="262.814,239.75,0,0" VerticalAlignment="Top" Width="522.186" Background="#FFA3A3A3"/>
+        <Grid HorizontalAlignment="Left" Height="66.75" Margin="262.814,345.75,0,0" VerticalAlignment="Top" Width="522.186" Background="#FFA3A3A3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="287*"/>
+                <ColumnDefinition Width="235*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
 
     </Grid>
 </Window>
