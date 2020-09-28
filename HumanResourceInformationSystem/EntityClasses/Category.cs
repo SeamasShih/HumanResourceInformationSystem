@@ -10,7 +10,7 @@ namespace HumanResourceInformationSystem.EntityClasses
     {
         Academic = 0,
         Technical = 1,
-        Administrative = 2,
+        Admin = 2,
         Casual = 3
     }
 }

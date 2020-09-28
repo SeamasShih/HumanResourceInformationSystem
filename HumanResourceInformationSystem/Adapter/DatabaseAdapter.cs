@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HumanResourceInformationSystem.EntityClasses;
 
 namespace HumanResourceInformationSystem.Adapter
 {
@@ -18,7 +20,7 @@ namespace HumanResourceInformationSystem.Adapter
 
         private static MySqlConnection conn;
 
-        public static void SQLConnection()
+        private static void SQLConnection()
         {
             // create connection via connection string
             string connectionString = String.Format("Database={0};Data Source={1};User Id={2};Password={3}", db, server, user, pass);
@@ -26,7 +28,7 @@ namespace HumanResourceInformationSystem.Adapter
         }
 
         //Close reader
-        public static void CloseReader(MySqlDataReader rdr)
+        private static void CloseReader(MySqlDataReader rdr)
         {
             if (rdr != null)
             {
@@ -46,10 +48,11 @@ namespace HumanResourceInformationSystem.Adapter
         // static function start hear
         
         // Retrieve Staff list information from Database
-        public static void RetrieveStaffList()
+        public static List<Staff> RetrieveStaffList()
         {
             SQLConnection();
             MySqlDataReader rdr = null;
+            List<Staff> staffs = new List<Staff>();
 
             try
             {
@@ -62,8 +65,9 @@ namespace HumanResourceInformationSystem.Adapter
                 // print the CategoryName of each record
                 while (rdr.Read())
                 {
-                    //This illustrates how the raw data can be obtained using an indexer [] or a particular data type can be obtained using a GetTYPENAME() method.
-                    Console.WriteLine("Load employee: {0} {1} {2} {3} {4}", rdr[0], rdr[1], rdr[2], rdr[3], rdr[4]);
+                    Staff staff = new Staff(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetString(3), (Category) Enum.Parse(typeof(Category) ,rdr.GetString(4)));
+                    Console.WriteLine("Retrive from database: " + staff);
+                    staffs.Add(staff);
                 }
             }
             finally
@@ -73,6 +77,8 @@ namespace HumanResourceInformationSystem.Adapter
                 // Close the connection
                 CloseConnection(conn);
             }
+
+            return staffs;
         }
     }
 }
