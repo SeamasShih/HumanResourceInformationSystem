@@ -62,16 +62,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Adapter\DatabaseAdapter.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="EntityClasses\Campus.cs" />
+    <Compile Include="EntityClasses\Category.cs" />
     <Compile Include="EntityClasses\Class.cs" />
+    <Compile Include="EntityClasses\Staff.cs" />
+    <Compile Include="EntityClasses\StaffDetail.cs" />
     <Compile Include="EntityClasses\Unit.cs" />
     <Compile Include="EntityClasses\UnitType.cs" />
     <Compile Include="EntityClasses\Weekday.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="MainWindow.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +89,21 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\App.g.cs" />
+    <Compile Include="obj\Debug\App.g.i.cs" />
+    <Compile Include="obj\Debug\HumanResourceInformationSystem_Content.g.i.cs" />
+    <Compile Include="obj\Debug\MainWindow.g.cs" />
+    <Compile Include="obj\Debug\MainWindow.g.i.cs" />
+    <Compile Include="obj\Debug\StaffDetails.g.cs" />
+    <Compile Include="obj\Debug\StaffDetails.g.i.cs" />
+    <Compile Include="obj\Debug\StaffListView.g.cs" />
+    <Compile Include="obj\Debug\StaffListView.g.i.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\App.g.cs" />
+    <Compile Include="obj\Release\MainWindow.g.cs" />
+    <Compile Include="obj\Release\StaffDetails.g.cs" />
+    <Compile Include="obj\Release\StaffListView.g.cs" />
     <Compile Include="StaffDetails.xaml.cs">
       <DependentUpon>StaffDetails.xaml</DependentUpon>
     </Compile>
@@ -108,6 +127,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\HumanResourceInformationSystem.exe.config" />
+    <None Include="obj\Release\HumanResourceInformationSystem_MarkupCompile.cache" />
+    <None Include="obj\Release\HumanResourceInformationSystem_MarkupCompile.lref" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="WX20200927-164148%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\HumanResourceInformationSystem.exe" />
+    <Content Include="bin\Debug\HumanResourceInformationSystem.pdb" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
