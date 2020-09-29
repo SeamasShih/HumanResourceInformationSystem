@@ -23,6 +23,12 @@ namespace HumanResourceInformationSystem
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //Change to StaffListView
+            this.Hide();
+            StaffListView staffListView = new StaffListView();
+            staffListView.Show();
         }
     }
 }

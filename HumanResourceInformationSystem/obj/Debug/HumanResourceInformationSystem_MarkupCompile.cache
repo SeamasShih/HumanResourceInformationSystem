@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-\\Mac\Home\Desktop\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\
+C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\
 HumanResourceInformationSystem
 none
 false
 DEBUG;TRACE
-\\Mac\Home\Desktop\HumanResourceInformationSystem\HumanResourceInformationSystem\App.xaml
+C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\App.xaml
 3-1519248371
 
-12-890906595
-13-1505183044
+16-1606275023
+141899681430
 MainWindow.xaml;StaffDetails.xaml;StaffListView.xaml;
 
 False

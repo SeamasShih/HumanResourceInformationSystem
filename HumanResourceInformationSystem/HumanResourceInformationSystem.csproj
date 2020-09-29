@@ -62,12 +62,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Adapter\DatabaseAdapter.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="EntityClasses\Campus.cs" />
+    <Compile Include="EntityClasses\Category.cs" />
     <Compile Include="EntityClasses\Class.cs" />
+    <Compile Include="EntityClasses\Staff.cs" />
+    <Compile Include="EntityClasses\StaffDetail.cs" />
     <Compile Include="EntityClasses\Unit.cs" />
     <Compile Include="EntityClasses\UnitType.cs" />
     <Compile Include="EntityClasses\Weekday.cs" />
