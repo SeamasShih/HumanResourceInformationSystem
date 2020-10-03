@@ -40,6 +40,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +61,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controller\StaffController.cs" />
+    <Compile Include="EntityClasses\Consultation.cs" />
+    <Compile Include="View\StaffDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffDetailView.Designer.cs">
+      <DependentUpon>StaffDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffList.Designer.cs">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,22 +96,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StaffDetails.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StaffListView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StaffDetails.xaml.cs">
-      <DependentUpon>StaffDetails.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StaffListView.xaml.cs">
-      <DependentUpon>StaffListView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,6 +115,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffDetailView.resx">
+      <DependentUpon>StaffDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffList.resx">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,5 +132,6 @@
   <ItemGroup>
     <Resource Include="WX20200927-164148%402x.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

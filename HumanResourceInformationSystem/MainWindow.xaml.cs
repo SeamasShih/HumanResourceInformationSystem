@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HumanResourceInformationSystem.Adapter;
+using HumanResourceInformationSystem.EntityClasses;
+using HumanResourceInformationSystem.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +30,10 @@ namespace HumanResourceInformationSystem
 
             //Change to StaffListView
             this.Hide();
-            StaffListView staffListView = new StaffListView();
-            staffListView.Show();
+            StaffList _staffListView = new StaffList();
+            _staffListView.Show();
+            //StaffDetailView _staffDetails = new StaffDetailView();
+            //_staffDetails.Show();
         }
     }
 }

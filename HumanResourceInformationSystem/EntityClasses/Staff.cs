@@ -25,9 +25,7 @@ namespace HumanResourceInformationSystem.EntityClasses
 
         public override string ToString()
         {
-            string s = String.Format("Staff: [" +
-                "ID= {0}, Given name= {1}, Family name= {2}, Title= {3}, Category= {4}" +
-                "]", Id, GivenName, FamilyName, Title, Category);
+            string s = String.Format(FamilyName + ", " + GivenName + "(" + Title + ")");
             return s;
         }
     }
