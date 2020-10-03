@@ -80,5 +80,106 @@ namespace HumanResourceInformationSystem.Adapter
 
             return staffs;
         }
+
+        // Retrieve Staff Details information from Database
+        public static List<StaffDetail> RetrieveStaffDetail()
+        {
+            SQLConnection();
+            MySqlDataReader rdr = null;
+            List<StaffDetail> _staffs = new List<StaffDetail>();
+
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // 1. Instantiate a new command with a query and connection
+                MySqlCommand cmd = new MySqlCommand("select id, given_name, family_name, title, campus, phone, room, email, photo, category from staff", conn);
+                // 2. Call Execute reader to get query results
+                rdr = cmd.ExecuteReader();
+                // print the CategoryName of each record
+                while (rdr.Read())
+                {
+                    StaffDetail _staffDetail = new StaffDetail(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetString(3), (Campus)Enum.Parse(typeof(Campus), rdr.GetString(4)), rdr.GetString(5), rdr.GetString(6), rdr.GetString(7), rdr.GetString(8), (Category)Enum.Parse(typeof(Category), rdr.GetString(9)));
+                    //Console.WriteLine("Retrive from database: " + _staffDetail);
+                    _staffs.Add(_staffDetail);
+                }
+            }
+            finally
+            {
+                // close the reader
+                CloseReader(rdr);
+                // Close the connection
+                CloseConnection(conn);
+            }
+
+            return _staffs;
+        }
+
+        //get consultation hours
+        public static List<Consultation> RetrieveConsultation()
+        {
+            SQLConnection();
+            MySqlDataReader rdr = null;
+            List<Consultation> _listConsulation = new List<Consultation>();
+
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // 1. Instantiate a new command with a query and connection
+                MySqlCommand cmd = new MySqlCommand("select staff_id, day, start, end from consultation", conn);
+                // 2. Call Execute reader to get query results
+                rdr = cmd.ExecuteReader();
+                // print the CategoryName of each record
+                while (rdr.Read())
+                {
+                    Consultation _consultation = new Consultation(rdr.GetInt32(0), (DayOfWeek)Enum.Parse(typeof(DayOfWeek), rdr.GetString(1)), Convert.ToDateTime(rdr.GetString(2)), Convert.ToDateTime(rdr.GetString(3)));
+                    _listConsulation.Add(_consultation);
+                }
+            }
+            finally
+            {
+                // close the reader
+                CloseReader(rdr);
+                // Close the connection
+                CloseConnection(conn);
+            }
+
+            return _listConsulation;
+        }
+
+        // get all units
+        public static List<Unit> RetrieveUnits()
+        {
+            SQLConnection();
+            MySqlDataReader rdr = null;
+            List<Unit> _listUnits = new List<Unit>();
+
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // 1. Instantiate a new command with a query and connection
+                MySqlCommand cmd = new MySqlCommand("select * from unit", conn);
+                // 2. Call Execute reader to get query results
+                rdr = cmd.ExecuteReader();
+                // print the CategoryName of each record
+                while (rdr.Read())
+                {
+                    Unit _unit = new Unit(rdr.GetString(0), rdr.GetString(1), rdr.GetInt32(2));
+                    _listUnits.Add(_unit);
+                }
+            }
+            finally
+            {
+                // close the reader
+                CloseReader(rdr);
+                // Close the connection
+                CloseConnection(conn);
+            }
+
+            return _listUnits;
+        }
+
     }
 }
