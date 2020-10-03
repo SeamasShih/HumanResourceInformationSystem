@@ -1,0 +1,54 @@
+﻿<Window x:Class="HumanResourceInformationSystem.StaffDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HumanResourceInformationSystem"
+        mc:Ignorable="d"
+        Title="StaffDetails" Height="450" Width="800">
+    <Grid Background="#FFC8C8C8">
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="20" Margin="20,20.404,0,0" Stroke="Black" VerticalAlignment="Top" Width="134" AutomationProperties.Name="SearchBox"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="159,20.404,0,0" VerticalAlignment="Top" Width="47" AutomationProperties.Name="SearchButton"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="32,22.404,0,0" TextWrapping="Wrap" Text="Serach Box" VerticalAlignment="Top" Width="72"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="21,55,0,0" TextWrapping="Wrap" Text="Staff Catagory" VerticalAlignment="Top" Width="83"/>
+        <CheckBox Content="Academic" Height="19" Margin="21,80,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.5,0.5" Cursor="SizeAll" UseLayoutRounding="False" HorizontalAlignment="Left" ScrollViewer.VerticalScrollBarVisibility="Auto" IsChecked="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Content="Admin" HorizontalAlignment="Left" Height="19" Margin="21,99,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <CheckBox Content="Tutor&#xA;" HorizontalAlignment="Left" Height="20" Margin="21,118,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <CheckBox Content="UC" HorizontalAlignment="Left" Height="19" Margin="21,138,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <CheckBox Content="DC" HorizontalAlignment="Left" Height="19" Margin="21,157,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="21,181,0,0" TextWrapping="Wrap" Text="Staff List" VerticalAlignment="Top" Width="187" FontSize="16" TextAlignment="Center" FontStyle="Italic"/>
+        <ListBox HorizontalAlignment="Left" Height="216" Margin="10,206,0,0" VerticalAlignment="Top" Width="208" Background="#FF828282" SelectionChanged="ListBox_SelectionChanged_1"/>
+        <TextBlock Height="52.596" Margin="360.67,-1.973,0,0" TextWrapping="Wrap" Text="Staff Detail" VerticalAlignment="Top" Width="337.673" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="154" Margin="262.814,47,0,0" Stroke="Black" VerticalAlignment="Top" Width="522.186"/>
+        <Ellipse HorizontalAlignment="Left" Height="102" Margin="305.866,69,0,0" Stroke="Black" VerticalAlignment="Top" Width="96.477">
+            <Ellipse.Fill>
+                <ImageBrush TileMode="FlipX" ImageSource="WX20200927-164148@2x.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,55,0,0" TextWrapping="Wrap" Text="Name: James Bond" VerticalAlignment="Top" Width="220.447" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,104,0,0" TextWrapping="Wrap" Text="Room Location: 710A" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,128,0,0" TextWrapping="Wrap" Text="Phone Number: 0405XXXXXX" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,152,0,0" TextWrapping="Wrap" Text="Email: Bond.James@utas.edu.au" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,176,0,0" TextWrapping="Wrap" Text="Consultation Time: 9:00-11:00 Monday" VerticalAlignment="Top" Width="268.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="441.261,81.38,0,0" TextWrapping="Wrap" Text="Campus: Hobart" VerticalAlignment="Top" Width="220.447"/>
+        <TextBlock HorizontalAlignment="Left" Height="33.75" Margin="402.343,206,0,0" TextWrapping="Wrap" Text="Participated Courses" VerticalAlignment="Top" Width="259.365" FontSize="20" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="33.75" Margin="402.343,312,0,0" TextWrapping="Wrap" Text="Timetable View" VerticalAlignment="Top" Width="259.365" FontSize="20" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
+        <Grid HorizontalAlignment="Left" Height="67.25" Margin="262.814,239.75,0,0" VerticalAlignment="Top" Width="522.186" Background="#FFA3A3A3"/>
+        <Grid HorizontalAlignment="Left" Height="66.75" Margin="262.814,345.75,0,0" VerticalAlignment="Top" Width="522.186" Background="#FFA3A3A3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="287*"/>
+                <ColumnDefinition Width="235*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+    </Grid>
+</Window>
