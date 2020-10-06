@@ -30,8 +30,12 @@ namespace HumanResourceInformationSystem
 
             //Change to StaffListView
             this.Hide();
-            StaffList _staffListView = new StaffList();
-            _staffListView.Show();
+            //StaffList _staffListView = new StaffList();
+            //_staffListView.Show();
+
+            UnitListView unitListView = new UnitListView();
+            unitListView.Show();
+
             //StaffDetailView _staffDetails = new StaffDetailView();
             //_staffDetails.Show();
         }

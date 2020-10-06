@@ -75,6 +75,12 @@
     <Compile Include="View\StaffList.Designer.cs">
       <DependentUpon>StaffList.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UnitListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UnitListView.Designer.cs">
+      <DependentUpon>UnitListView.cs</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UnitListView.resx">
+      <DependentUpon>UnitListView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
