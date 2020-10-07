@@ -181,5 +181,44 @@ namespace HumanResourceInformationSystem.Adapter
             return _listUnits;
         }
 
+        public static List<Class> RetrieveClassesByUnit(Unit unit)
+        {
+            SQLConnection();
+            MySqlDataReader rdr = null;
+            List<Class> listClasses = new List<Class>();
+
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // 1. Instantiate a new command with a query and connection
+                MySqlCommand cmd = new MySqlCommand("select * from class where unit_code = '" + unit.Code + "'", conn);
+                // 2. Call Execute reader to get query results
+                rdr = cmd.ExecuteReader();
+                // print the CategoryName of each record
+                while (rdr.Read())
+                {
+                    Class _class = new Class(rdr.GetString(0), 
+                        (Campus)Enum.Parse(typeof(Campus), rdr.GetString(1)),
+                        (Weekday)Enum.Parse(typeof(Weekday), rdr.GetString(2)),
+                        rdr.GetTimeSpan(3),
+                        rdr.GetTimeSpan(4),
+                        (UnitType)Enum.Parse(typeof(UnitType), rdr.GetString(5)),
+                        rdr.GetString(6),
+                        rdr.GetInt32(7));
+                    Console.WriteLine(_class.ToString());
+                    listClasses.Add(_class);
+                }
+            }
+            finally
+            {
+                // close the reader
+                CloseReader(rdr);
+                // Close the connection
+                CloseConnection(conn);
+            }
+
+            return listClasses;
+        }
     }
 }

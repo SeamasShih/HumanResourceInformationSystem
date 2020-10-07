@@ -37,10 +37,12 @@
             // 
             // textSearch
             // 
-            this.textSearch.Location = new System.Drawing.Point(107, 12);
+            this.textSearch.Location = new System.Drawing.Point(117, 12);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(162, 25);
+            this.textSearch.Size = new System.Drawing.Size(152, 25);
             this.textSearch.TabIndex = 0;
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
+            this.textSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textSearch_KeyDown);
             // 
             // labelSearch
             // 
@@ -60,6 +62,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // labelTitle
             // 
@@ -78,6 +81,8 @@
             this.listUnit.Size = new System.Drawing.Size(295, 345);
             this.listUnit.TabIndex = 4;
             this.listUnit.UseCompatibleStateImageBehavior = false;
+            this.listUnit.View = System.Windows.Forms.View.List;
+            this.listUnit.SelectedIndexChanged += new System.EventHandler(this.listUnit_SelectedIndexChanged);
             // 
             // UnitListView
             // 

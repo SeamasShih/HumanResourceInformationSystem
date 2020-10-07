@@ -17,5 +17,23 @@ namespace HumanResourceInformationSystem.EntityClasses
         public UnitType Type { private set; get; }
         public string Room { private set; get; }
         public int Staff { private set; get; }
+
+        public Class(string unitCode, Campus campus, Weekday day, 
+            TimeSpan start, TimeSpan end, UnitType type, string room, int stff)
+        {
+            UnitCode = unitCode;
+            Campus = campus;
+            Day = day;
+            Start = start;
+            End = end;
+            Type = type;
+            Room = room;
+            Staff = Staff;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} {1} {2} {3} {4} {5} {6} {7}", UnitCode, Campus, Day, Start, End, Type, Room, Staff);
+        }
     }
 }
