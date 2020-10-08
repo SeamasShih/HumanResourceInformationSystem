@@ -54,3 +54,4 @@ C:\Users\dongxuanthang\Source\Repos\HumanResourceInformationSystem\HumanResource
 C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.View.StaffDetailView.resources
 C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.View.StaffList.resources
 C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.View.UnitListView.resources
+C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.View.UnitClassList.resources

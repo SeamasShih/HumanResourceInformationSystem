@@ -66,8 +66,10 @@ namespace HumanResourceInformationSystem.View
             if (collection.Count > 0)
             {
                 ListViewItem item = listUnit.SelectedItems[0];
-                Unit unit = (Unit)item.Tag;
-                DatabaseAdapter.RetrieveClassesByUnit(unit);
+                UnitController.Unit = (Unit)item.Tag;
+                Hide();
+                UnitClassList unitClassList = new UnitClassList();
+                unitClassList.Show();
             }
         }
     }

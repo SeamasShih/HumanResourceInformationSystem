@@ -3,6 +3,7 @@ using HumanResourceInformationSystem.EntityClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace HumanResourceInformationSystem.Controller
     {
         private static List<Unit> Units;
         private static List<Class> Classes;
+        public static Unit Unit { set; get; }
         public static List<Unit> filterUnitByString(string s)
         {
             checkUnits();
