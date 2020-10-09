@@ -26,18 +26,19 @@ namespace HumanResourceInformationSystem
         public MainWindow()
         {
             InitializeComponent();
+        }
 
+        private void btnStaff_Click(object sender, RoutedEventArgs e)
+        {
 
-            //Change to StaffListView
-            this.Hide();
-            //StaffList _staffListView = new StaffList();
-            //_staffListView.Show();
+        }
 
+        private void btnUnit_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
             UnitListView unitListView = new UnitListView();
+            unitListView.previous = this;
             unitListView.Show();
-
-            //StaffDetailView _staffDetails = new StaffDetailView();
-            //_staffDetails.Show();
         }
     }
 }

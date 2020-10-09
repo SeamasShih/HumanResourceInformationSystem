@@ -27,6 +27,26 @@ namespace HumanResourceInformationSystem.Controller
             return r;
         }
 
+        public static List<Class> filterClassByCampus(Campus campus)
+        {
+            switch (campus)
+            {
+                case Campus.All:
+                    return Classes;
+                case Campus.Hobart:
+                case Campus.Launceston:
+                    var list = Classes.Where(c => c.Campus == campus).Select(c => c);
+                    List<Class> cla = new List<Class>();
+                    foreach (Class c in list)
+                    {
+                        cla.Add(c);
+                    }
+                    return cla;
+                default:
+                    return null;
+            }
+        }
+
         public static List<Unit> getUnitList()
         {
             checkUnits();
@@ -36,6 +56,11 @@ namespace HumanResourceInformationSystem.Controller
         public static List<Class> getClassListByUnit(Unit unit)
         {
             Classes = DatabaseAdapter.RetrieveClassesByUnit(unit);
+            return Classes;
+        }
+
+        public static List<Class> getClassList()
+        {
             return Classes;
         }
 

@@ -9,12 +9,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace HumanResourceInformationSystem.View
 {
     public partial class UnitListView : Form
     {
+        public Window previous;
         public UnitListView()
         {
             InitializeComponent();
@@ -62,6 +64,7 @@ namespace HumanResourceInformationSystem.View
 
         private void listUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             ListView.SelectedListViewItemCollection collection = this.listUnit.SelectedItems;
             if (collection.Count > 0)
             {
@@ -69,8 +72,15 @@ namespace HumanResourceInformationSystem.View
                 UnitController.Unit = (Unit)item.Tag;
                 Hide();
                 UnitClassList unitClassList = new UnitClassList();
+                unitClassList.previous = this;
                 unitClassList.Show();
             }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            previous.Show();
         }
     }
 }

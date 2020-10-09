@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="Title" Content="Human Resource Information System" HorizontalAlignment="Left" Margin="72,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.394,-0.389" Height="57" Width="649" FontSize="36"/>
+        <Button x:Name="btnStaff" Content="Staff List" HorizontalAlignment="Left" Margin="171,183,0,0" VerticalAlignment="Top" Width="111" Height="117" IsDefault="True" FontSize="20" Click="btnStaff_Click"/>
+        <Button x:Name="btnUnit" Content="Unit List" HorizontalAlignment="Left" Margin="449,183,0,0" VerticalAlignment="Top" Width="111" Height="117" FontSize="20" Click="btnUnit_Click"/>
+
     </Grid>
 </Window>

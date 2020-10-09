@@ -32,6 +32,7 @@
             this.comboBoxCampusFilter = new System.Windows.Forms.ComboBox();
             this.classListView = new System.Windows.Forms.ListView();
             this.labelListView = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCampusFilter
@@ -51,6 +52,7 @@
             this.comboBoxCampusFilter.Name = "comboBoxCampusFilter";
             this.comboBoxCampusFilter.Size = new System.Drawing.Size(121, 23);
             this.comboBoxCampusFilter.TabIndex = 1;
+            this.comboBoxCampusFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampusFilter_SelectedIndexChanged);
             // 
             // classListView
             // 
@@ -73,11 +75,22 @@
             this.labelListView.TabIndex = 3;
             this.labelListView.Text = "Class List";
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(463, 10);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 4;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // UnitClassList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 450);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelListView);
             this.Controls.Add(this.classListView);
             this.Controls.Add(this.comboBoxCampusFilter);
@@ -95,5 +108,6 @@
         private System.Windows.Forms.ComboBox comboBoxCampusFilter;
         private System.Windows.Forms.ListView classListView;
         private System.Windows.Forms.Label labelListView;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

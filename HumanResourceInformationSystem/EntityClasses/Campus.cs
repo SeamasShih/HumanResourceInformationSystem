@@ -9,6 +9,8 @@ namespace HumanResourceInformationSystem.EntityClasses
     public enum Campus
     {
         Hobart = 0,
-        Launceston = 1
+        Launceston = 1,
+
+        All = 99
     }
 }
