@@ -134,54 +134,48 @@
             this.txtStaffName.AutoSize = true;
             this.txtStaffName.Location = new System.Drawing.Point(127, 22);
             this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(33, 13);
+            this.txtStaffName.Size = new System.Drawing.Size(0, 13);
             this.txtStaffName.TabIndex = 8;
-            this.txtStaffName.Text = "name";
             // 
             // txtStaffCampus
             // 
             this.txtStaffCampus.AutoSize = true;
             this.txtStaffCampus.Location = new System.Drawing.Point(127, 45);
             this.txtStaffCampus.Name = "txtStaffCampus";
-            this.txtStaffCampus.Size = new System.Drawing.Size(44, 13);
+            this.txtStaffCampus.Size = new System.Drawing.Size(0, 13);
             this.txtStaffCampus.TabIndex = 9;
-            this.txtStaffCampus.Text = "campus";
             // 
             // txtStaffPhoneNumber
             // 
             this.txtStaffPhoneNumber.AutoSize = true;
             this.txtStaffPhoneNumber.Location = new System.Drawing.Point(127, 68);
             this.txtStaffPhoneNumber.Name = "txtStaffPhoneNumber";
-            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(76, 13);
+            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(0, 13);
             this.txtStaffPhoneNumber.TabIndex = 10;
-            this.txtStaffPhoneNumber.Text = "Phone number";
             // 
             // txtRoomLocation
             // 
             this.txtRoomLocation.AutoSize = true;
             this.txtRoomLocation.Location = new System.Drawing.Point(127, 92);
             this.txtRoomLocation.Name = "txtRoomLocation";
-            this.txtRoomLocation.Size = new System.Drawing.Size(30, 13);
+            this.txtRoomLocation.Size = new System.Drawing.Size(0, 13);
             this.txtRoomLocation.TabIndex = 11;
-            this.txtRoomLocation.Text = "room";
             // 
             // txtEmailAddress
             // 
             this.txtEmailAddress.AutoSize = true;
             this.txtEmailAddress.Location = new System.Drawing.Point(127, 118);
             this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(31, 13);
+            this.txtEmailAddress.Size = new System.Drawing.Size(0, 13);
             this.txtEmailAddress.TabIndex = 12;
-            this.txtEmailAddress.Text = "email";
             // 
             // txtConsultationHours
             // 
             this.txtConsultationHours.AutoSize = true;
             this.txtConsultationHours.Location = new System.Drawing.Point(127, 141);
             this.txtConsultationHours.Name = "txtConsultationHours";
-            this.txtConsultationHours.Size = new System.Drawing.Size(73, 13);
+            this.txtConsultationHours.Size = new System.Drawing.Size(0, 13);
             this.txtConsultationHours.TabIndex = 13;
-            this.txtConsultationHours.Text = "consultation h";
             // 
             // txtTableOfUnits
             // 
@@ -222,9 +216,8 @@
             this.txtCurrentAvaiability.AutoSize = true;
             this.txtCurrentAvaiability.Location = new System.Drawing.Point(400, 141);
             this.txtCurrentAvaiability.Name = "txtCurrentAvaiability";
-            this.txtCurrentAvaiability.Size = new System.Drawing.Size(41, 13);
+            this.txtCurrentAvaiability.Size = new System.Drawing.Size(0, 13);
             this.txtCurrentAvaiability.TabIndex = 19;
-            this.txtCurrentAvaiability.Text = "label10";
             // 
             // activityGridView
             // 
