@@ -15,7 +15,6 @@ namespace HumanResourceInformationSystem.View
     public partial class StaffList : Form
     {
         public static int _selectedStaffId = 0;
-        StaffDetailView _staffDetails = null;
         public void loadComboboxCategory()
         {
             comboBoxCategory.Items.Add("All");
@@ -66,22 +65,11 @@ namespace HumanResourceInformationSystem.View
             ListView.SelectedListViewItemCollection _collection = this.staffListView.SelectedItems;
             if(_collection.Count > 0) 
             {
+                StaffDetailView _staffView = new StaffDetailView();
                 ListViewItem _listViewItem = staffListView.SelectedItems[0];
                 Staff _staff = (Staff)_listViewItem.Tag;
-                //Console.WriteLine("===> staff Id: " + _staff.Id);
                 _selectedStaffId = _staff.Id;
-                if (_staffDetails == null) {
-                    _staffDetails = new StaffDetailView();
-                    _staffDetails.Show();
-                }
-                else
-                {
-                    _staffDetails.Close();
-                    _staffDetails = new StaffDetailView();
-                    _staffDetails.Show();
-                }
-                
-
+                MainView._staffDetailView.showStaffDetail();
             }
 
         }

@@ -22,7 +22,7 @@ namespace HumanResourceInformationSystem.EntityClasses
 
         public override string ToString()
         {
-            string s = String.Format(Code + " - " + Title);
+            string s = String.Format(Code + " - " + Title + " - " + Coordinator);
             return s;
         }
 

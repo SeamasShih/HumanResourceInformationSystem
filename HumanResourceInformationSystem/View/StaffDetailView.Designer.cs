@@ -60,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(524, 21);
+            this.label2.Location = new System.Drawing.Point(297, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 1;
@@ -114,7 +114,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 300);
+            this.label8.Location = new System.Drawing.Point(22, 267);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(166, 13);
             this.label8.TabIndex = 7;
@@ -125,54 +125,48 @@
             this.txtStaffName.AutoSize = true;
             this.txtStaffName.Location = new System.Drawing.Point(129, 21);
             this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(35, 13);
+            this.txtStaffName.Size = new System.Drawing.Size(0, 13);
             this.txtStaffName.TabIndex = 8;
-            this.txtStaffName.Text = "label9";
             // 
             // txtStaffCampus
             // 
             this.txtStaffCampus.AutoSize = true;
             this.txtStaffCampus.Location = new System.Drawing.Point(128, 57);
             this.txtStaffCampus.Name = "txtStaffCampus";
-            this.txtStaffCampus.Size = new System.Drawing.Size(35, 13);
+            this.txtStaffCampus.Size = new System.Drawing.Size(0, 13);
             this.txtStaffCampus.TabIndex = 9;
-            this.txtStaffCampus.Text = "label9";
             // 
             // txtStaffPhoneNumber
             // 
             this.txtStaffPhoneNumber.AutoSize = true;
             this.txtStaffPhoneNumber.Location = new System.Drawing.Point(128, 91);
             this.txtStaffPhoneNumber.Name = "txtStaffPhoneNumber";
-            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(35, 13);
+            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(0, 13);
             this.txtStaffPhoneNumber.TabIndex = 10;
-            this.txtStaffPhoneNumber.Text = "label9";
             // 
             // txtRoomLocation
             // 
             this.txtRoomLocation.AutoSize = true;
             this.txtRoomLocation.Location = new System.Drawing.Point(132, 129);
             this.txtRoomLocation.Name = "txtRoomLocation";
-            this.txtRoomLocation.Size = new System.Drawing.Size(35, 13);
+            this.txtRoomLocation.Size = new System.Drawing.Size(0, 13);
             this.txtRoomLocation.TabIndex = 11;
-            this.txtRoomLocation.Text = "label9";
             // 
             // txtEmailAddress
             // 
             this.txtEmailAddress.AutoSize = true;
             this.txtEmailAddress.Location = new System.Drawing.Point(132, 167);
             this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(35, 13);
+            this.txtEmailAddress.Size = new System.Drawing.Size(0, 13);
             this.txtEmailAddress.TabIndex = 12;
-            this.txtEmailAddress.Text = "label9";
             // 
             // txtConsultationHours
             // 
             this.txtConsultationHours.AutoSize = true;
             this.txtConsultationHours.Location = new System.Drawing.Point(135, 202);
             this.txtConsultationHours.Name = "txtConsultationHours";
-            this.txtConsultationHours.Size = new System.Drawing.Size(35, 13);
+            this.txtConsultationHours.Size = new System.Drawing.Size(0, 13);
             this.txtConsultationHours.TabIndex = 13;
-            this.txtConsultationHours.Text = "label9";
             // 
             // txtTableOfUnits
             // 
@@ -184,18 +178,18 @@
             // 
             // pictureBoxStaff
             // 
-            this.pictureBoxStaff.Location = new System.Drawing.Point(584, 21);
+            this.pictureBoxStaff.Location = new System.Drawing.Point(344, 21);
             this.pictureBoxStaff.Name = "pictureBoxStaff";
-            this.pictureBoxStaff.Size = new System.Drawing.Size(204, 205);
+            this.pictureBoxStaff.Size = new System.Drawing.Size(167, 194);
             this.pictureBoxStaff.TabIndex = 16;
             this.pictureBoxStaff.TabStop = false;
             // 
             // listViewStaffUnits
             // 
             this.listViewStaffUnits.HideSelection = false;
-            this.listViewStaffUnits.Location = new System.Drawing.Point(220, 300);
+            this.listViewStaffUnits.Location = new System.Drawing.Point(25, 299);
             this.listViewStaffUnits.Name = "listViewStaffUnits";
-            this.listViewStaffUnits.Size = new System.Drawing.Size(274, 97);
+            this.listViewStaffUnits.Size = new System.Drawing.Size(486, 97);
             this.listViewStaffUnits.TabIndex = 17;
             this.listViewStaffUnits.UseCompatibleStateImageBehavior = false;
             // 
@@ -203,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(550, 450);
             this.Controls.Add(this.listViewStaffUnits);
             this.Controls.Add(this.pictureBoxStaff);
             this.Controls.Add(this.txtTableOfUnits);
@@ -221,6 +215,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffDetailView";
             this.Text = "StaffDetails";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStaff)).EndInit();

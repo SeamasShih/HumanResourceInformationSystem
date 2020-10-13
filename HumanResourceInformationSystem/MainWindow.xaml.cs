@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -26,14 +27,15 @@ namespace HumanResourceInformationSystem
         public MainWindow()
         {
             InitializeComponent();
+            
+            MainView _mainView = new MainView();
+            _mainView.TopLevel = false;
+            MainForm.Child = _mainView;
+            _mainView.Show();
 
-
-            //Change to StaffListView
-            this.Hide();
-            StaffList _staffListView = new StaffList();
-            _staffListView.Show();
-            //StaffDetailView _staffDetails = new StaffDetailView();
-            //_staffDetails.Show();
+        //    UnitListView view = new UnitListView();
+        //   view.Show();
         }
+
     }
 }

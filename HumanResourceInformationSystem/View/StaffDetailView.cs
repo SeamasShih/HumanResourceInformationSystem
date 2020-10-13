@@ -21,7 +21,9 @@ namespace HumanResourceInformationSystem.View
         public void showStaffDetail()
         {
             Console.WriteLine("===> staff Id: " + StaffList._selectedStaffId);
+
             StaffDetail _staffDetail = StaffController.getStaffDetail(StaffList._selectedStaffId);
+
             txtStaffName.Text = _staffDetail.FamilyName + ", " + _staffDetail.GivenName + " (" + _staffDetail.Title + ")";
             txtStaffCampus.Text = _staffDetail.Campus.ToString();
             txtStaffPhoneNumber.Text = _staffDetail.Phone;
@@ -30,7 +32,8 @@ namespace HumanResourceInformationSystem.View
             //Consultation hours
             txtConsultationHours.Text = "";
             List<Consultation> _listConsultation = StaffController.getConsultationByStaffId(StaffList._selectedStaffId);
-            foreach(var item in _listConsultation)
+
+            foreach (var item in _listConsultation)
             {
                 txtConsultationHours.Text += item + "\n";
             }
@@ -38,6 +41,7 @@ namespace HumanResourceInformationSystem.View
 
             listViewStaffUnits.View = System.Windows.Forms.View.List;
             List<Unit> _listUnits = StaffController.getUnitsByStaffId(StaffList._selectedStaffId);
+
             foreach (var item in _listUnits)
             {
                 listViewStaffUnits.Items.Add(item.ToString());
@@ -50,7 +54,6 @@ namespace HumanResourceInformationSystem.View
         public StaffDetailView()
         {
             InitializeComponent();
-            showStaffDetail();
         }
 
     }

@@ -47,9 +47,9 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(244, 39);
+            this.buttonSearch.Location = new System.Drawing.Point(19, 77);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(104, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(219, 23);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -59,14 +59,14 @@
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(111, 13);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(237, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(127, 20);
             this.textBoxSearch.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(145, 71);
+            this.label2.Location = new System.Drawing.Point(85, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 3;
@@ -76,9 +76,9 @@
             // 
             this.staffListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staffListView.HideSelection = false;
-            this.staffListView.Location = new System.Drawing.Point(16, 96);
+            this.staffListView.Location = new System.Drawing.Point(16, 133);
             this.staffListView.Name = "staffListView";
-            this.staffListView.Size = new System.Drawing.Size(332, 450);
+            this.staffListView.Size = new System.Drawing.Size(222, 305);
             this.staffListView.TabIndex = 4;
             this.staffListView.UseCompatibleStateImageBehavior = false;
             this.staffListView.SelectedIndexChanged += new System.EventHandler(this.staffListView_SelectedIndexChanged);
@@ -103,7 +103,7 @@
             // 
             // StaffList
             // 
-            this.ClientSize = new System.Drawing.Size(361, 558);
+            this.ClientSize = new System.Drawing.Size(250, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.staffListView);
@@ -111,6 +111,7 @@
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.comboBoxCategory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffList";
             this.ResumeLayout(false);
             this.PerformLayout();
