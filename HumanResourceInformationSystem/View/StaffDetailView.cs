@@ -15,8 +15,8 @@ namespace HumanResourceInformationSystem.View
 {
     public partial class StaffDetailView : Form
     {
-        //use for catch unit code when click unit in table of units in staff detail.
-        public static string selectedUnitCode = "";
+        //use for catch unit code when click unit in table of units.
+        public static string _selectedUnitCode = "";
         //show staff detail
         public void showStaffDetail()
         {
@@ -42,17 +42,17 @@ namespace HumanResourceInformationSystem.View
 
             foreach (var item in _listUnits)
             {
-                listViewStaffUnits.Items.Add(item.ToString());
+                ListViewItem _listViewItem = new ListViewItem();
+                // Use Tag for catch Unit code
+                _listViewItem.Tag = item;
+                _listViewItem.Text = item.ToString();
+                listViewStaffUnits.Items.Add(_listViewItem);
             }
             //photo
             pictureBoxStaff.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxStaff.Load(_staffDetail.Photo);
 
             //current avaiability
-            //get current date:
-            Console.WriteLine("===>" + DateTime.Now.DayOfWeek.ToString());
-            //get current time:
-            Console.WriteLine("===>" + DateTime.Now.TimeOfDay.ToString());
             //get time of class.
             List<Class> _listClasses = StaffController.getClassesByStaffID(StaffList._selectedStaffId);
             // use to check current valiability status
@@ -159,6 +159,23 @@ namespace HumanResourceInformationSystem.View
                 lblFree.Visible = true;
             }
            
+        }
+        
+        // event when random click to unit in table of units.
+        private void listViewStaffUnits_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection _collection = this.listViewStaffUnits.SelectedItems;
+            if(_collection.Count > 0) 
+            {
+                ListViewItem _listViewItem = listViewStaffUnits.SelectedItems[0];
+                Unit _unit = (Unit)_listViewItem.Tag;
+                _selectedUnitCode = _unit.Code;
+                Console.WriteLine("===unit code==>: " + _selectedUnitCode);
+                //change focus tab
+                MainWindow._mainView.changeUnitTabFocus(_selectedUnitCode);
+                // set selected unit list view
+            }
+
         }
     }
 }

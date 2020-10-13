@@ -72,5 +72,20 @@ namespace HumanResourceInformationSystem.View
                 MainView.unitClassList.LoadClasses();
             }
         }
+
+        public void focusSelectedUnit(string _unitCode)
+        {
+            loadView();
+            
+            for(int i=0; i<listUnit.Items.Count; i++)
+            {
+                Unit _unit = (Unit) listUnit.Items[i].Tag;
+                //found unit code
+                if(_unit.Code == _unitCode)
+                {
+                    listUnit.Items[i].Selected = true;
+                }
+            }
+        }
     }
 }

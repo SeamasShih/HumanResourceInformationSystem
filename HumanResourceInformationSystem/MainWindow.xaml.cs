@@ -24,18 +24,13 @@ namespace HumanResourceInformationSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainView _mainView = new MainView();
         public MainWindow()
         {
             InitializeComponent();
-            
-            MainView _mainView = new MainView();
             _mainView.TopLevel = false;
             MainForm.Child = _mainView;
             _mainView.Show();
-
-        //    UnitListView view = new UnitListView();
-        //   view.Show();
-
         }
 
     }

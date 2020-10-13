@@ -201,6 +201,7 @@
             this.listViewStaffUnits.Size = new System.Drawing.Size(323, 63);
             this.listViewStaffUnits.TabIndex = 17;
             this.listViewStaffUnits.UseCompatibleStateImageBehavior = false;
+            this.listViewStaffUnits.SelectedIndexChanged += new System.EventHandler(this.listViewStaffUnits_SelectedIndexChanged);
             // 
             // label9
             // 

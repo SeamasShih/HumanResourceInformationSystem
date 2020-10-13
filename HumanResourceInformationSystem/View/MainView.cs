@@ -15,10 +15,13 @@ namespace HumanResourceInformationSystem.View
         // view of staff details
         public static StaffDetailView _staffDetailView = new StaffDetailView();
         public static UnitClassList unitClassList = new UnitClassList();
+        public static StaffList _staffListForm = new StaffList();
+        public static UnitListView unitListView = new UnitListView();
+
+
         public MainView()
         {
             InitializeComponent();
-
             setStaffListForm();
             setUnitListForm();
         }
@@ -27,7 +30,6 @@ namespace HumanResourceInformationSystem.View
         {
             staffSplitContainer.Dock = DockStyle.Fill;
             // put staff list view in panel 1 of staff split container
-            StaffList _staffListForm = new StaffList();
             _staffListForm.TopLevel = false;
             _staffListForm.Parent = staffSplitContainer.Panel1;
             _staffListForm.Show();
@@ -48,7 +50,6 @@ namespace HumanResourceInformationSystem.View
             UnitsplitContainer.Dock = DockStyle.Fill;
 
             //set unit form
-            UnitListView unitListView = new UnitListView();
             unitListView.TopLevel = false;
             unitListView.Parent = UnitsplitContainer.Panel1;
             unitListView.Show();
@@ -59,6 +60,14 @@ namespace HumanResourceInformationSystem.View
             unitClassList.Parent = UnitsplitContainer.Panel2;
             unitClassList.Show();
             unitClassList.Dock = DockStyle.Fill;
+        }
+
+        //change unit tab focus
+        public void changeUnitTabFocus(string _unitCode)
+        {
+            Console.WriteLine("===unit code===>" + _unitCode);
+            mainTabControl.SelectedTab = tabPageUnits;
+            unitListView.focusSelectedUnit(_unitCode);
         }
     }
 }
