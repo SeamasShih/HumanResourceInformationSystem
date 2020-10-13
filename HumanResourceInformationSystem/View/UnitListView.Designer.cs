@@ -33,12 +33,11 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.listUnit = new System.Windows.Forms.ListView();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textSearch
             // 
-            this.textSearch.Location = new System.Drawing.Point(144, 12);
+            this.textSearch.Location = new System.Drawing.Point(118, 12);
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(125, 25);
             this.textSearch.TabIndex = 0;
@@ -48,7 +47,7 @@
             // labelSearch
             // 
             this.labelSearch.Font = new System.Drawing.Font("PMingLiU", 12F);
-            this.labelSearch.Location = new System.Drawing.Point(49, 12);
+            this.labelSearch.Location = new System.Drawing.Point(23, 12);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(89, 25);
             this.labelSearch.TabIndex = 1;
@@ -57,7 +56,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(275, 11);
+            this.btnSearch.Location = new System.Drawing.Point(261, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -80,35 +79,24 @@
             this.listUnit.HideSelection = false;
             this.listUnit.Location = new System.Drawing.Point(27, 110);
             this.listUnit.Name = "listUnit";
-            this.listUnit.Size = new System.Drawing.Size(295, 345);
+            this.listUnit.Size = new System.Drawing.Size(393, 345);
             this.listUnit.TabIndex = 4;
             this.listUnit.UseCompatibleStateImageBehavior = false;
             this.listUnit.View = System.Windows.Forms.View.List;
             this.listUnit.SelectedIndexChanged += new System.EventHandler(this.listUnit_SelectedIndexChanged);
             // 
-            // buttonBack
-            // 
-            this.buttonBack.Location = new System.Drawing.Point(12, 11);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(31, 23);
-            this.buttonBack.TabIndex = 5;
-            this.buttonBack.Text = "<";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
             // UnitListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 484);
-            this.Controls.Add(this.buttonBack);
+            this.ClientSize = new System.Drawing.Size(432, 484);
             this.Controls.Add(this.listUnit);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UnitListView";
-            this.Text = "UnitListView";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +109,5 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ListView listUnit;
-        private System.Windows.Forms.Button buttonBack;
     }
 }

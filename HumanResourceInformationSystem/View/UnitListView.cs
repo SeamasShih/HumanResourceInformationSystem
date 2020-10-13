@@ -16,7 +16,6 @@ namespace HumanResourceInformationSystem.View
 {
     public partial class UnitListView : Form
     {
-        public Window previous;
         public UnitListView()
         {
             InitializeComponent();
@@ -70,17 +69,8 @@ namespace HumanResourceInformationSystem.View
             {
                 ListViewItem item = listUnit.SelectedItems[0];
                 UnitController.Unit = (Unit)item.Tag;
-                Hide();
-                UnitClassList unitClassList = new UnitClassList();
-                unitClassList.previous = this;
-                unitClassList.Show();
+                MainView.unitClassList.LoadClasses();
             }
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            Hide();
-            previous.Show();
         }
     }
 }

@@ -59,3 +59,4 @@ C:\Users\dongxuanthang\Source\Repos\HumanResourceInformationSystem\HumanResource
 C:\Users\dongxuanthang\Source\Repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.csproj.CopyComplete
 C:\Users\dongxuanthang\Source\Repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.exe
 C:\Users\dongxuanthang\Source\Repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.pdb
+C:\Users\SeamasShih\source\repos\HumanResourceInformationSystem\HumanResourceInformationSystem\obj\Debug\HumanResourceInformationSystem.View.MainView.resources

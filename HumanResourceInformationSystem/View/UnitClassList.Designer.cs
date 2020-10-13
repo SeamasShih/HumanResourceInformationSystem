@@ -32,7 +32,6 @@
             this.comboBoxCampusFilter = new System.Windows.Forms.ComboBox();
             this.classListView = new System.Windows.Forms.ListView();
             this.labelListView = new System.Windows.Forms.Label();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCampusFilter
@@ -75,26 +74,16 @@
             this.labelListView.TabIndex = 3;
             this.labelListView.Text = "Class List";
             // 
-            // buttonBack
-            // 
-            this.buttonBack.Location = new System.Drawing.Point(463, 10);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 4;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
             // UnitClassList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 450);
-            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelListView);
             this.Controls.Add(this.classListView);
             this.Controls.Add(this.comboBoxCampusFilter);
             this.Controls.Add(this.labelCampusFilter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UnitClassList";
             this.Text = "UnitClassList";
             this.ResumeLayout(false);
@@ -108,6 +97,5 @@
         private System.Windows.Forms.ComboBox comboBoxCampusFilter;
         private System.Windows.Forms.ListView classListView;
         private System.Windows.Forms.Label labelListView;
-        private System.Windows.Forms.Button buttonBack;
     }
 }
