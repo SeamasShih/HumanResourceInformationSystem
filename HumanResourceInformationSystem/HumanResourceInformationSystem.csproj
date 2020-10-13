@@ -66,6 +66,7 @@
     <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Controller\UnitController.cs" />
     <Compile Include="EntityClasses\Consultation.cs" />
+    <Compile Include="EntityClasses\CurrentAvaiability.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>

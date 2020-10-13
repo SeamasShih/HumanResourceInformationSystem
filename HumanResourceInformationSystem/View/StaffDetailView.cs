@@ -47,6 +47,51 @@ namespace HumanResourceInformationSystem.View
             pictureBoxStaff.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxStaff.Load(_staffDetail.Photo);
 
+            //current avaiability
+            //get current date:
+            Console.WriteLine("===>" + DateTime.Now.DayOfWeek.ToString());
+            //get current time:
+            Console.WriteLine("===>" + DateTime.Now.TimeOfDay.ToString());
+            //get time of class.
+            List<Class> _listClasses = StaffController.getClassesByStaffID(StaffList._selectedStaffId);
+            // use to check current valiability status
+            Boolean _temp = true;
+            // check class time
+            foreach (var item in _listClasses)
+            {
+                //compare day of week first
+                if(item.Day.CompareTo((Weekday)DateTime.Now.DayOfWeek) == 0)
+                {
+                    //compare time
+                    if(DateTime.Now.TimeOfDay.CompareTo(item.Start) < 0 && DateTime.Now.TimeOfDay.CompareTo(item.End) > 0)
+                    {
+                        //class time
+                        txtCurrentAvaiability.Text = "Teaching";
+                        _temp = false;
+                    }
+                }
+            }
+            // check consultation time
+            foreach (var item in _listConsultation)
+            {
+                //compare day of week first
+                if (item.DayOfWeek.CompareTo(DateTime.Now.DayOfWeek) == 0)
+                {
+                    //compare time
+                    if (DateTime.Now.TimeOfDay.CompareTo(item.StartTime.TimeOfDay) < 0 && DateTime.Now.TimeOfDay.CompareTo(item.EndTime.TimeOfDay) > 0)
+                    {
+                        //class time
+                        txtCurrentAvaiability.Text = "Consultation";
+                        _temp = false;
+                    }
+                }
+            }
+            // if not teaching or consultation
+            if (_temp)
+            {
+                txtCurrentAvaiability.Text = "Free";
+            }
+
         }
         public StaffDetailView()
         {

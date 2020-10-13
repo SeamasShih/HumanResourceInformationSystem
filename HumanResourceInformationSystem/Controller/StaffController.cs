@@ -78,6 +78,20 @@ namespace HumanResourceInformationSystem.Controller
             return _consultation;
         }
 
+        //get classes by staff ID
+        public static List<Class> getClassesByStaffID(int _staffID)
+        {
+            List<Class> _listClasses = new List<Class>();
+            var _classes = DatabaseAdapter.RetrieveClasses();
+            var list = from item in _classes where item.Staff == _staffID select item;
+            foreach (var item in list)
+            {
+                _listClasses.Add(item);
+                Console.WriteLine(item);
+            }
+            return _listClasses;
+        }
+
         //get list of units by staff ID
         public static List<Unit> getUnitsByStaffId(int _staffId)
         {

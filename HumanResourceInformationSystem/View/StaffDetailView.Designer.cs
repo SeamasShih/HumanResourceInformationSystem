@@ -45,6 +45,8 @@
             this.txtTableOfUnits = new System.Windows.Forms.Label();
             this.pictureBoxStaff = new System.Windows.Forms.PictureBox();
             this.listViewStaffUnits = new System.Windows.Forms.ListView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCurrentAvaiability = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 21);
+            this.label2.Location = new System.Drawing.Point(301, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 1;
@@ -178,9 +180,9 @@
             // 
             // pictureBoxStaff
             // 
-            this.pictureBoxStaff.Location = new System.Drawing.Point(344, 21);
+            this.pictureBoxStaff.Location = new System.Drawing.Point(367, 21);
             this.pictureBoxStaff.Name = "pictureBoxStaff";
-            this.pictureBoxStaff.Size = new System.Drawing.Size(167, 194);
+            this.pictureBoxStaff.Size = new System.Drawing.Size(114, 133);
             this.pictureBoxStaff.TabIndex = 16;
             this.pictureBoxStaff.TabStop = false;
             // 
@@ -189,15 +191,35 @@
             this.listViewStaffUnits.HideSelection = false;
             this.listViewStaffUnits.Location = new System.Drawing.Point(25, 299);
             this.listViewStaffUnits.Name = "listViewStaffUnits";
-            this.listViewStaffUnits.Size = new System.Drawing.Size(486, 97);
+            this.listViewStaffUnits.Size = new System.Drawing.Size(456, 97);
             this.listViewStaffUnits.TabIndex = 17;
             this.listViewStaffUnits.UseCompatibleStateImageBehavior = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(301, 201);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Current avaiability: ";
+            // 
+            // txtCurrentAvaiability
+            // 
+            this.txtCurrentAvaiability.AutoSize = true;
+            this.txtCurrentAvaiability.Location = new System.Drawing.Point(404, 200);
+            this.txtCurrentAvaiability.Name = "txtCurrentAvaiability";
+            this.txtCurrentAvaiability.Size = new System.Drawing.Size(41, 13);
+            this.txtCurrentAvaiability.TabIndex = 19;
+            this.txtCurrentAvaiability.Text = "label10";
             // 
             // StaffDetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 450);
+            this.ClientSize = new System.Drawing.Size(493, 450);
+            this.Controls.Add(this.txtCurrentAvaiability);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.listViewStaffUnits);
             this.Controls.Add(this.pictureBoxStaff);
             this.Controls.Add(this.txtTableOfUnits);
@@ -243,5 +265,7 @@
         private System.Windows.Forms.Label txtTableOfUnits;
         private System.Windows.Forms.PictureBox pictureBoxStaff;
         private System.Windows.Forms.ListView listViewStaffUnits;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label txtCurrentAvaiability;
     }
 }

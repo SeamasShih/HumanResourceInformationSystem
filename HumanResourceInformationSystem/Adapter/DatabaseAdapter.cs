@@ -146,6 +146,39 @@ namespace HumanResourceInformationSystem.Adapter
             return _listConsulation;
         }
 
+        //get all class by staff ID
+        public static List<Class> RetrieveClasses()
+        {
+            SQLConnection();
+            MySqlDataReader rdr = null;
+            List<Class> _listClasses = new List<Class>();
+
+            try
+            {
+                // Open the connection
+                conn.Open();
+                // 1. Instantiate a new command with a query and connection
+                MySqlCommand cmd = new MySqlCommand("select staff, day, start, end from class", conn);
+                // 2. Call Execute reader to get query results
+                rdr = cmd.ExecuteReader();
+                // print the CategoryName of each record
+                while (rdr.Read())
+                {
+                    Class _class = new Class(rdr.GetInt32(0), (Weekday)Enum.Parse(typeof(Weekday), rdr.GetString(1)), rdr.GetTimeSpan(2), rdr.GetTimeSpan(3));
+                    _listClasses.Add(_class);
+                }
+            }
+            finally
+            {
+                // close the reader
+                CloseReader(rdr);
+                // Close the connection
+                CloseConnection(conn);
+            }
+
+            return _listClasses;
+        }
+
         // get all units
         public static List<Unit> RetrieveUnits()
         {

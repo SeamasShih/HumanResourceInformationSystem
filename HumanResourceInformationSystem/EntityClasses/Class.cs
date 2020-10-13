@@ -33,6 +33,14 @@ namespace HumanResourceInformationSystem.EntityClasses
             StaffName = staffName;
         }
 
+        public Class(int staffID, Weekday day, TimeSpan start, TimeSpan end)
+        {
+            Staff = staffID;
+            Day = day;
+            Start = start;
+            End = end;
+        }
+
         public override string ToString()
         {
             return String.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8}", UnitCode, Campus, Day, Start, End, Type, Room, Staff, StaffName);
