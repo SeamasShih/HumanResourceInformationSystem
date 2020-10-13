@@ -44,8 +44,6 @@ namespace HumanResourceInformationSystem.Adapter
                 conn.Close();
             }
         }
-
-        // static function start hear
         
         // Retrieve Staff list information from Database
         public static List<Staff> RetrieveStaffList()
@@ -181,6 +179,7 @@ namespace HumanResourceInformationSystem.Adapter
             return _listUnits;
         }
 
+        //get all classes under the certain unit.
         public static List<Class> RetrieveClassesByUnit(Unit unit)
         {
             SQLConnection();
@@ -222,6 +221,8 @@ namespace HumanResourceInformationSystem.Adapter
             return listClasses;
         }
 
+        //get the specific staff's name by providing an id.
+        //it is used for showing real name instead of an id in the class table
         private static string RetrieveStaffNameByID(int id)
         {
             SQLConnection();

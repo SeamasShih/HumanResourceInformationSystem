@@ -8,20 +8,20 @@ namespace HumanResourceInformationSystem.View
 {
     public partial class UnitClassList : Form
     {
-        public Form previous;
         public UnitClassList()
         {
             InitializeComponent();
-
-            LoadClasses();
         }
 
-        private void LoadClasses()
+        //Load class data from databass. 
+        //It can be called by other objects.
+        public void LoadClasses()
         {
             RefreshListView(UnitController.getClassListByUnit(UnitController.Unit));
             SetCampusSelection();
         }
 
+        //Set the selection of campus, including all, Laucenston, and Hobart.
         private void SetCampusSelection()
         {
             comboBoxCampusFilter.Items.Add(Campus.All);
@@ -30,8 +30,10 @@ namespace HumanResourceInformationSystem.View
             comboBoxCampusFilter.SelectedIndex = 0;
         }
 
+        //After retriving data from database, refresh the UI based on what has been downloaded.
         private void RefreshListView(List<Class> classes)
         {
+            //Set the columns of classes, including campus, day, start time, end time, type, room, and staff.
             classListView.Clear();
             classListView.Columns.Add("Campus");
             classListView.Columns.Add("Day");
@@ -41,7 +43,7 @@ namespace HumanResourceInformationSystem.View
             classListView.Columns.Add("Room");
             classListView.Columns.Add("Staff");
 
-
+            //Put the classes from database into the class table
             foreach (Class c in classes)
             {
                 ListViewItem item = new ListViewItem();
@@ -54,7 +56,6 @@ namespace HumanResourceInformationSystem.View
                 item.SubItems.Add(c.Type.ToString());
                 item.SubItems.Add(c.Room);
                 item.SubItems.Add(c.StaffName);
-                Console.WriteLine(c.StaffName);
                 classListView.Items.Add(item);
             }
 
@@ -65,17 +66,12 @@ namespace HumanResourceInformationSystem.View
             }
         }
 
+        //When a selection of the filter is selected, show only classes in the specific campus.
         private void comboBoxCampusFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Class> classes = UnitController.filterClassByCampus((Campus)comboBoxCampusFilter.SelectedItem);
             if (classes != null)
                 RefreshListView(classes);
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            Hide();
-            previous.Show();
         }
     }
 }

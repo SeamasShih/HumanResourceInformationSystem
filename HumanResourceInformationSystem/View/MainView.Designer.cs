@@ -45,10 +45,11 @@
             // tabPageUnits
             // 
             this.tabPageUnits.Controls.Add(this.UnitsplitContainer);
-            this.tabPageUnits.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUnits.Location = new System.Drawing.Point(4, 25);
+            this.tabPageUnits.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageUnits.Name = "tabPageUnits";
-            this.tabPageUnits.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUnits.Size = new System.Drawing.Size(791, 429);
+            this.tabPageUnits.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPageUnits.Size = new System.Drawing.Size(1057, 496);
             this.tabPageUnits.TabIndex = 1;
             this.tabPageUnits.Text = "Units";
             this.tabPageUnits.UseVisualStyleBackColor = true;
@@ -56,19 +57,22 @@
             // UnitsplitContainer
             // 
             this.UnitsplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UnitsplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.UnitsplitContainer.Location = new System.Drawing.Point(4, 3);
+            this.UnitsplitContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.UnitsplitContainer.Name = "UnitsplitContainer";
-            this.UnitsplitContainer.Size = new System.Drawing.Size(785, 423);
-            this.UnitsplitContainer.SplitterDistance = 261;
+            this.UnitsplitContainer.Size = new System.Drawing.Size(1049, 490);
+            this.UnitsplitContainer.SplitterDistance = 439;
+            this.UnitsplitContainer.SplitterWidth = 5;
             this.UnitsplitContainer.TabIndex = 0;
             // 
             // tabPageStaff
             // 
             this.tabPageStaff.Controls.Add(this.staffSplitContainer);
-            this.tabPageStaff.Location = new System.Drawing.Point(4, 22);
+            this.tabPageStaff.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStaff.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageStaff.Name = "tabPageStaff";
-            this.tabPageStaff.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStaff.Size = new System.Drawing.Size(791, 429);
+            this.tabPageStaff.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPageStaff.Size = new System.Drawing.Size(1057, 496);
             this.tabPageStaff.TabIndex = 0;
             this.tabPageStaff.Text = "Staff";
             this.tabPageStaff.UseVisualStyleBackColor = true;
@@ -76,10 +80,12 @@
             // staffSplitContainer
             // 
             this.staffSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.staffSplitContainer.Location = new System.Drawing.Point(4, 3);
+            this.staffSplitContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.staffSplitContainer.Name = "staffSplitContainer";
-            this.staffSplitContainer.Size = new System.Drawing.Size(785, 423);
-            this.staffSplitContainer.SplitterDistance = 242;
+            this.staffSplitContainer.Size = new System.Drawing.Size(1049, 490);
+            this.staffSplitContainer.SplitterDistance = 323;
+            this.staffSplitContainer.SplitterWidth = 5;
             this.staffSplitContainer.TabIndex = 0;
             // 
             // mainTabControl
@@ -87,19 +93,21 @@
             this.mainTabControl.Controls.Add(this.tabPageStaff);
             this.mainTabControl.Controls.Add(this.tabPageUnits);
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
+            this.mainTabControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(799, 455);
+            this.mainTabControl.Size = new System.Drawing.Size(1065, 525);
             this.mainTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.mainTabControl.TabIndex = 0;
             // 
             // MainView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 519);
             this.Controls.Add(this.mainTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainView";
             this.Text = "MainView";
             this.tabPageUnits.ResumeLayout(false);

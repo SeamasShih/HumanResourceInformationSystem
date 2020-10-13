@@ -14,9 +14,17 @@ namespace HumanResourceInformationSystem.View
     {
         // view of staff details
         public static StaffDetailView _staffDetailView = new StaffDetailView();
+        public static UnitClassList unitClassList = new UnitClassList();
         public MainView()
         {
             InitializeComponent();
+
+            setStaffListForm();
+            setUnitListForm();
+        }
+
+        private void setStaffListForm()
+        {
             staffSplitContainer.Dock = DockStyle.Fill;
             // put staff list view in panel 1 of staff split container
             StaffList _staffListForm = new StaffList();
@@ -30,6 +38,27 @@ namespace HumanResourceInformationSystem.View
             _staffDetailView.Parent = staffSplitContainer.Panel2;
             _staffDetailView.Show();
             _staffDetailView.Dock = DockStyle.Fill;
+        }
+
+        /// <summary>
+        /// In Here, the initial setting of unit form and class list form are done.
+        /// </summary>
+        private void setUnitListForm()
+        {
+            UnitsplitContainer.Dock = DockStyle.Fill;
+
+            //set unit form
+            UnitListView unitListView = new UnitListView();
+            unitListView.TopLevel = false;
+            unitListView.Parent = UnitsplitContainer.Panel1;
+            unitListView.Show();
+            unitListView.Dock = DockStyle.Fill;
+
+            //set class list form
+            unitClassList.TopLevel = false;
+            unitClassList.Parent = UnitsplitContainer.Panel2;
+            unitClassList.Show();
+            unitClassList.Dock = DockStyle.Fill;
         }
     }
 }
