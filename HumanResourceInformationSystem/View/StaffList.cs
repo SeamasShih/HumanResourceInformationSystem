@@ -73,5 +73,10 @@ namespace HumanResourceInformationSystem.View
             }
 
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
