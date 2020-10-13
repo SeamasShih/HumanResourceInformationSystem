@@ -21,9 +21,7 @@ namespace HumanResourceInformationSystem.View
         public void showStaffDetail()
         {
             Console.WriteLine("===> staff Id: " + StaffList._selectedStaffId);
-
             StaffDetail _staffDetail = StaffController.getStaffDetail(StaffList._selectedStaffId);
-
             txtStaffName.Text = _staffDetail.FamilyName + ", " + _staffDetail.GivenName + " (" + _staffDetail.Title + ")";
             txtStaffCampus.Text = _staffDetail.Campus.ToString();
             txtStaffPhoneNumber.Text = _staffDetail.Phone;
@@ -38,7 +36,6 @@ namespace HumanResourceInformationSystem.View
                 txtConsultationHours.Text += item + "\n";
             }
             //Table of units
-
             listViewStaffUnits.View = System.Windows.Forms.View.List;
             List<Unit> _listUnits = StaffController.getUnitsByStaffId(StaffList._selectedStaffId);
 

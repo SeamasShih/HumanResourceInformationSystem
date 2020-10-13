@@ -62,7 +62,6 @@
             this.textBoxSearch.Size = new System.Drawing.Size(127, 20);
             this.textBoxSearch.Size = new System.Drawing.Size(237, 25);
             this.textBoxSearch.TabIndex = 2;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // label2
             // 

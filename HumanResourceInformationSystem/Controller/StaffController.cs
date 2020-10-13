@@ -16,7 +16,7 @@ namespace HumanResourceInformationSystem.Controller
         public static List<Staff> getStaffListView()
         {
             List<Staff> _staffList = new List<Staff>();
-            //use linq here
+            //use linq to filter here
             var _staffDetailList = DatabaseAdapter.RetrieveStaffList();
             var list = from item in _staffDetailList select item;
             foreach (var item in list)
@@ -26,11 +26,14 @@ namespace HumanResourceInformationSystem.Controller
             }
             return _staffList;
         }
+
+        // get list of staff when click Search button
         public static List<Staff> getStaffListBySearchEvent(string _searchString, string _category)
         {
             Console.WriteLine("========>" + _category);
             _searchString = _searchString.ToUpper();
             List<Staff> _listStaff = new List<Staff>();
+            //use linq to filter here
             var _staffDetailList = DatabaseAdapter.RetrieveStaffList();
             var list = from item in _staffDetailList where item.FamilyName.ToUpper().Contains(_searchString) || item.GivenName.ToUpper().Contains(_searchString) select item;
             if (_category != "All")
@@ -45,10 +48,11 @@ namespace HumanResourceInformationSystem.Controller
             return _listStaff;
         }
 
+        // get staff details by staff ID
         public static StaffDetail getStaffDetail(int _staffId)
         {
             StaffDetail _staffDetail = null;
-            //use linq here
+            //use linq to filter here
             var _staffDetailList = DatabaseAdapter.RetrieveStaffDetail();
             var list = from item in _staffDetailList where item.Id == _staffId select item;
             foreach (var item in list)
@@ -59,10 +63,11 @@ namespace HumanResourceInformationSystem.Controller
             return _staffDetail;
         }
 
+        //get consultation time by staff ID
         public static List<Consultation> getConsultationByStaffId(int _staffId)
         {
             List<Consultation> _consultation = new List<Consultation>();
-            //use linq here
+            //use linq to filter here
             var _consultationNotFilterYet = DatabaseAdapter.RetrieveConsultation();
             var list = from item in _consultationNotFilterYet where item.StaffId == _staffId select item;
             foreach (var item in list)
@@ -73,10 +78,11 @@ namespace HumanResourceInformationSystem.Controller
             return _consultation;
         }
 
+        //get list of units by staff ID
         public static List<Unit> getUnitsByStaffId(int _staffId)
         {
             List<Unit> _listUnits = new List<Unit>();
-            //use linq here
+            //use linq to filter here
             var _unitsNotFilterYet = DatabaseAdapter.RetrieveUnits();
             var list = from item in _unitsNotFilterYet where item.Coordinator == _staffId select item;
             foreach (var item in list)

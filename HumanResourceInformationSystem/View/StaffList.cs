@@ -14,7 +14,9 @@ namespace HumanResourceInformationSystem.View
 {
     public partial class StaffList : Form
     {
+        // use to catch the selected staff id when click to random staff in list.
         public static int _selectedStaffId = 0;
+        // load combobox category
         public void loadComboboxCategory()
         {
             comboBoxCategory.Items.Add("All");
@@ -24,6 +26,7 @@ namespace HumanResourceInformationSystem.View
             comboBoxCategory.Items.Add(Category.Technical);
             comboBoxCategory.SelectedIndex = 0;
         }
+        // Display staff list
         public void loadStaffList()
         {
             staffListView.View = System.Windows.Forms.View.List;
@@ -31,6 +34,7 @@ namespace HumanResourceInformationSystem.View
             foreach (var item in _listStaff)
             {
                 ListViewItem _listViewItem = new ListViewItem();
+                // use Tag to get the ID of staff
                 _listViewItem.Tag = item;
                 _listViewItem.Text = item.ToString();
                 staffListView.Items.Add(_listViewItem);
@@ -38,13 +42,12 @@ namespace HumanResourceInformationSystem.View
         }
         public StaffList()
         {
-
-            
             InitializeComponent();
             loadComboboxCategory();
             loadStaffList();
         }
 
+        // event when click to the Search button
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             string _searchString = textBoxSearch.Text;
@@ -60,6 +63,7 @@ namespace HumanResourceInformationSystem.View
             }
         }
 
+        // event when selected random staff in list
         private void staffListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection _collection = this.staffListView.SelectedItems;
@@ -71,11 +75,6 @@ namespace HumanResourceInformationSystem.View
                 _selectedStaffId = _staff.Id;
                 MainView._staffDetailView.showStaffDetail();
             }
-
-        }
-
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
