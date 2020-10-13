@@ -47,7 +47,14 @@
             this.listViewStaffUnits = new System.Windows.Forms.ListView();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCurrentAvaiability = new System.Windows.Forms.Label();
+            this.activityGridView = new System.Windows.Forms.DataGridView();
+            this.cbActivityGrid = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblTeaching = new System.Windows.Forms.Label();
+            this.lblConsultation = new System.Windows.Forms.Label();
+            this.lblFree = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activityGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 58);
+            this.label3.Location = new System.Drawing.Point(22, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 2;
@@ -80,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 92);
+            this.label4.Location = new System.Drawing.Point(22, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 3;
@@ -89,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 130);
+            this.label5.Location = new System.Drawing.Point(22, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 13);
             this.label5.TabIndex = 4;
@@ -98,7 +105,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 168);
+            this.label6.Location = new System.Drawing.Point(22, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 5;
@@ -107,7 +114,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 203);
+            this.label7.Location = new System.Drawing.Point(22, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 13);
             this.label7.TabIndex = 6;
@@ -116,59 +123,65 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 267);
+            this.label8.Location = new System.Drawing.Point(33, 190);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 13);
+            this.label8.Size = new System.Drawing.Size(73, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Table of Units (Current Semester):";
+            this.label8.Text = "Table of Units";
             // 
             // txtStaffName
             // 
             this.txtStaffName.AutoSize = true;
-            this.txtStaffName.Location = new System.Drawing.Point(129, 21);
+            this.txtStaffName.Location = new System.Drawing.Point(127, 22);
             this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(0, 13);
+            this.txtStaffName.Size = new System.Drawing.Size(33, 13);
             this.txtStaffName.TabIndex = 8;
+            this.txtStaffName.Text = "name";
             // 
             // txtStaffCampus
             // 
             this.txtStaffCampus.AutoSize = true;
-            this.txtStaffCampus.Location = new System.Drawing.Point(128, 57);
+            this.txtStaffCampus.Location = new System.Drawing.Point(127, 45);
             this.txtStaffCampus.Name = "txtStaffCampus";
-            this.txtStaffCampus.Size = new System.Drawing.Size(0, 13);
+            this.txtStaffCampus.Size = new System.Drawing.Size(44, 13);
             this.txtStaffCampus.TabIndex = 9;
+            this.txtStaffCampus.Text = "campus";
             // 
             // txtStaffPhoneNumber
             // 
             this.txtStaffPhoneNumber.AutoSize = true;
-            this.txtStaffPhoneNumber.Location = new System.Drawing.Point(128, 91);
+            this.txtStaffPhoneNumber.Location = new System.Drawing.Point(127, 68);
             this.txtStaffPhoneNumber.Name = "txtStaffPhoneNumber";
-            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(0, 13);
+            this.txtStaffPhoneNumber.Size = new System.Drawing.Size(76, 13);
             this.txtStaffPhoneNumber.TabIndex = 10;
+            this.txtStaffPhoneNumber.Text = "Phone number";
             // 
             // txtRoomLocation
             // 
             this.txtRoomLocation.AutoSize = true;
-            this.txtRoomLocation.Location = new System.Drawing.Point(132, 129);
+            this.txtRoomLocation.Location = new System.Drawing.Point(127, 92);
             this.txtRoomLocation.Name = "txtRoomLocation";
-            this.txtRoomLocation.Size = new System.Drawing.Size(0, 13);
+            this.txtRoomLocation.Size = new System.Drawing.Size(30, 13);
             this.txtRoomLocation.TabIndex = 11;
+            this.txtRoomLocation.Text = "room";
             // 
             // txtEmailAddress
             // 
             this.txtEmailAddress.AutoSize = true;
-            this.txtEmailAddress.Location = new System.Drawing.Point(132, 167);
+            this.txtEmailAddress.Location = new System.Drawing.Point(127, 118);
             this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(0, 13);
+            this.txtEmailAddress.Size = new System.Drawing.Size(31, 13);
             this.txtEmailAddress.TabIndex = 12;
+            this.txtEmailAddress.Text = "email";
             // 
             // txtConsultationHours
             // 
             this.txtConsultationHours.AutoSize = true;
-            this.txtConsultationHours.Location = new System.Drawing.Point(135, 202);
+            this.txtConsultationHours.Location = new System.Drawing.Point(127, 141);
             this.txtConsultationHours.Name = "txtConsultationHours";
-            this.txtConsultationHours.Size = new System.Drawing.Size(0, 13);
+            this.txtConsultationHours.Size = new System.Drawing.Size(73, 13);
             this.txtConsultationHours.TabIndex = 13;
+            this.txtConsultationHours.Text = "consultation h";
             // 
             // txtTableOfUnits
             // 
@@ -180,25 +193,25 @@
             // 
             // pictureBoxStaff
             // 
-            this.pictureBoxStaff.Location = new System.Drawing.Point(367, 21);
+            this.pictureBoxStaff.Location = new System.Drawing.Point(348, 21);
             this.pictureBoxStaff.Name = "pictureBoxStaff";
-            this.pictureBoxStaff.Size = new System.Drawing.Size(114, 133);
+            this.pictureBoxStaff.Size = new System.Drawing.Size(93, 110);
             this.pictureBoxStaff.TabIndex = 16;
             this.pictureBoxStaff.TabStop = false;
             // 
             // listViewStaffUnits
             // 
             this.listViewStaffUnits.HideSelection = false;
-            this.listViewStaffUnits.Location = new System.Drawing.Point(25, 299);
+            this.listViewStaffUnits.Location = new System.Drawing.Point(128, 190);
             this.listViewStaffUnits.Name = "listViewStaffUnits";
-            this.listViewStaffUnits.Size = new System.Drawing.Size(456, 97);
+            this.listViewStaffUnits.Size = new System.Drawing.Size(323, 63);
             this.listViewStaffUnits.TabIndex = 17;
             this.listViewStaffUnits.UseCompatibleStateImageBehavior = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(301, 201);
+            this.label9.Location = new System.Drawing.Point(301, 141);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 13);
             this.label9.TabIndex = 18;
@@ -207,17 +220,86 @@
             // txtCurrentAvaiability
             // 
             this.txtCurrentAvaiability.AutoSize = true;
-            this.txtCurrentAvaiability.Location = new System.Drawing.Point(404, 200);
+            this.txtCurrentAvaiability.Location = new System.Drawing.Point(400, 141);
             this.txtCurrentAvaiability.Name = "txtCurrentAvaiability";
             this.txtCurrentAvaiability.Size = new System.Drawing.Size(41, 13);
             this.txtCurrentAvaiability.TabIndex = 19;
             this.txtCurrentAvaiability.Text = "label10";
             // 
+            // activityGridView
+            // 
+            this.activityGridView.AllowUserToAddRows = false;
+            this.activityGridView.AllowUserToDeleteRows = false;
+            this.activityGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.activityGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.activityGridView.Location = new System.Drawing.Point(12, 282);
+            this.activityGridView.Name = "activityGridView";
+            this.activityGridView.ReadOnly = true;
+            this.activityGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.activityGridView.Size = new System.Drawing.Size(439, 123);
+            this.activityGridView.TabIndex = 20;
+            // 
+            // cbActivityGrid
+            // 
+            this.cbActivityGrid.AutoSize = true;
+            this.cbActivityGrid.Location = new System.Drawing.Point(23, 259);
+            this.cbActivityGrid.Name = "cbActivityGrid";
+            this.cbActivityGrid.Size = new System.Drawing.Size(148, 17);
+            this.cbActivityGrid.TabIndex = 21;
+            this.cbActivityGrid.Text = "Display activity colour grid";
+            this.cbActivityGrid.UseVisualStyleBackColor = true;
+            this.cbActivityGrid.CheckedChanged += new System.EventHandler(this.cbActivityGrid_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 203);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = " (Current Semester):";
+            // 
+            // lblTeaching
+            // 
+            this.lblTeaching.AutoSize = true;
+            this.lblTeaching.BackColor = System.Drawing.Color.Red;
+            this.lblTeaching.Location = new System.Drawing.Point(185, 260);
+            this.lblTeaching.Name = "lblTeaching";
+            this.lblTeaching.Size = new System.Drawing.Size(52, 13);
+            this.lblTeaching.TabIndex = 23;
+            this.lblTeaching.Text = "Teaching";
+            // 
+            // lblConsultation
+            // 
+            this.lblConsultation.AutoSize = true;
+            this.lblConsultation.BackColor = System.Drawing.Color.Lime;
+            this.lblConsultation.Location = new System.Drawing.Point(255, 259);
+            this.lblConsultation.Name = "lblConsultation";
+            this.lblConsultation.Size = new System.Drawing.Size(65, 13);
+            this.lblConsultation.TabIndex = 24;
+            this.lblConsultation.Text = "Consultation";
+            // 
+            // lblFree
+            // 
+            this.lblFree.AutoSize = true;
+            this.lblFree.BackColor = System.Drawing.Color.White;
+            this.lblFree.Location = new System.Drawing.Point(336, 259);
+            this.lblFree.Name = "lblFree";
+            this.lblFree.Size = new System.Drawing.Size(28, 13);
+            this.lblFree.TabIndex = 25;
+            this.lblFree.Text = "Free";
+            // 
             // StaffDetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 450);
+            this.ClientSize = new System.Drawing.Size(456, 416);
+            this.Controls.Add(this.lblFree);
+            this.Controls.Add(this.lblConsultation);
+            this.Controls.Add(this.lblTeaching);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cbActivityGrid);
+            this.Controls.Add(this.activityGridView);
             this.Controls.Add(this.txtCurrentAvaiability);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listViewStaffUnits);
@@ -241,6 +323,7 @@
             this.Name = "StaffDetailView";
             this.Text = "StaffDetails";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activityGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +350,11 @@
         private System.Windows.Forms.ListView listViewStaffUnits;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label txtCurrentAvaiability;
+        private System.Windows.Forms.DataGridView activityGridView;
+        private System.Windows.Forms.CheckBox cbActivityGrid;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTeaching;
+        private System.Windows.Forms.Label lblConsultation;
+        private System.Windows.Forms.Label lblFree;
     }
 }

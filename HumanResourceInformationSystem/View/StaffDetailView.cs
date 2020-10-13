@@ -37,6 +37,7 @@ namespace HumanResourceInformationSystem.View
             }
             //Table of units
             listViewStaffUnits.View = System.Windows.Forms.View.List;
+            listViewStaffUnits.Clear();
             List<Unit> _listUnits = StaffController.getUnitsByStaffId(StaffList._selectedStaffId);
 
             foreach (var item in _listUnits)
@@ -92,11 +93,72 @@ namespace HumanResourceInformationSystem.View
                 txtCurrentAvaiability.Text = "Free";
             }
 
+            //load activity grid view
+            loadActivityGridView(_listClasses, _listConsultation);
         }
         public StaffDetailView()
         {
             InitializeComponent();
         }
 
+        // load activity colour grid view
+        public void loadActivityGridView(List<Class> _listClasses, List<Consultation> _listConsultation)
+        {
+            //load white color for all first
+            DataTable _activityTable = new DataTable();
+            _activityTable.Columns.Add("Time");
+            _activityTable.Columns.Add("Monday");
+            _activityTable.Columns.Add("Tuesday");
+            _activityTable.Columns.Add("Wednesday");
+            _activityTable.Columns.Add("Thursday");
+            _activityTable.Columns.Add("Friday");
+            for (int i=9; i<17; i++)
+            {
+                DataRow _dataRow = _activityTable.NewRow();
+                _dataRow["Time"] = i + ":00 - " + (i+1) + ":00";
+                _activityTable.Rows.Add(_dataRow);
+               
+            }
+            activityGridView.DataSource = _activityTable;
+
+            // colour for teaching
+            foreach (var item in _listClasses)
+            {
+                for (int j = item.Start.Hours; j < item.End.Hours; j++)
+                {
+                    //colour
+                    activityGridView.Rows[j - 9].Cells[item.Day.ToString()].Style.BackColor = Color.Red;
+                }
+            }
+            // colour for consultation
+            foreach (var item in _listConsultation)
+            {
+                for (int j = item.StartTime.Hour; j < item.EndTime.Hour; j++)
+                {
+                    //colour
+                    activityGridView.Rows[j-9].Cells[item.DayOfWeek.ToString()].Style.BackColor = Color.Lime;
+                }
+            }
+        }
+
+        // show and hide activity colour grid
+        private void cbActivityGrid_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbActivityGrid.Checked)
+            {
+                activityGridView.Visible = false;
+                lblTeaching.Visible = false;
+                lblConsultation.Visible = false;
+                lblFree.Visible = false;
+            }
+            else
+            {
+                activityGridView.Visible = true;
+                lblTeaching.Visible = true;
+                lblConsultation.Visible = true;
+                lblFree.Visible = true;
+            }
+           
+        }
     }
 }
