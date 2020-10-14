@@ -2,6 +2,7 @@
 using HumanResourceInformationSystem.EntityClasses;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace HumanResourceInformationSystem.View
@@ -11,6 +12,7 @@ namespace HumanResourceInformationSystem.View
         public UnitClassList()
         {
             InitializeComponent();
+            SetCampusSelection();
         }
 
         //Load class data from databass. 
@@ -18,7 +20,6 @@ namespace HumanResourceInformationSystem.View
         public void LoadClasses()
         {
             RefreshListView(UnitController.getClassListByUnit(UnitController.Unit));
-            SetCampusSelection();
         }
 
         //Set the selection of campus, including all, Laucenston, and Hobart.
@@ -35,13 +36,13 @@ namespace HumanResourceInformationSystem.View
         {
             //Set the columns of classes, including campus, day, start time, end time, type, room, and staff.
             classListView.Clear();
-            classListView.Columns.Add("Campus");
-            classListView.Columns.Add("Day");
-            classListView.Columns.Add("Start");
-            classListView.Columns.Add("End");
-            classListView.Columns.Add("Type");
-            classListView.Columns.Add("Room");
-            classListView.Columns.Add("Staff");
+            classListView.Columns.Add("Campus", "Campus");
+            classListView.Columns.Add("Day", "Day");
+            classListView.Columns.Add("Start", "Start");
+            classListView.Columns.Add("End", "End");
+            classListView.Columns.Add("Type", "Type");
+            classListView.Columns.Add("Room", "Room");
+            classListView.Columns.Add("Staff", "Staff");
 
             //Put the classes from database into the class table
             foreach (Class c in classes)
@@ -72,6 +73,19 @@ namespace HumanResourceInformationSystem.View
             List<Class> classes = UnitController.filterClassByCampus((Campus)comboBoxCampusFilter.SelectedItem);
             if (classes != null)
                 RefreshListView(classes);
+        }
+
+        //When user click a staff in the table, show the staff detail in staff page
+        //If user click other columns except for staff (such as campus, start time), do nothing
+        private void classListView_Click(object sender, EventArgs e)
+        {
+            Point mousePos = classListView.PointToClient(Control.MousePosition);
+            ListViewHitTestInfo hitTest = classListView.HitTest(mousePos);
+
+            //if user click the staff name, show the staff in staff page
+            int columnIndex = hitTest.Item.SubItems.IndexOf(hitTest.SubItem);
+            if (columnIndex == classListView.Columns.IndexOfKey("Staff"))
+                MainWindow._mainView.changeUnitTabFocusByStaffID(((Class)hitTest.Item.Tag).Staff);
         }
     }
 }

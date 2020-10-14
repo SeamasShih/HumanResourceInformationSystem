@@ -16,6 +16,8 @@ namespace HumanResourceInformationSystem.View
     {
         // use to catch the selected staff id when click to random staff in list.
         public static int _selectedStaffId = 0;
+
+
         // load combobox category
         public void loadComboboxCategory()
         {
@@ -24,12 +26,16 @@ namespace HumanResourceInformationSystem.View
             comboBoxCategory.Items.Add(Category.Admin);
             comboBoxCategory.Items.Add(Category.Casual);
             comboBoxCategory.Items.Add(Category.Technical);
+
+            //set All as default
             comboBoxCategory.SelectedIndex = 0;
         }
+
         // Display staff list
         public void loadStaffList()
         {
             staffListView.View = System.Windows.Forms.View.List;
+            //retrieve staff list from database
             List<Staff> _listStaff = StaffController.getStaffListView();
             foreach (var item in _listStaff)
             {
@@ -67,7 +73,7 @@ namespace HumanResourceInformationSystem.View
         private void staffListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection _collection = this.staffListView.SelectedItems;
-            if(_collection.Count > 0) 
+            if (_collection.Count > 0)
             {
                 StaffDetailView _staffView = new StaffDetailView();
                 ListViewItem _listViewItem = staffListView.SelectedItems[0];
@@ -76,6 +82,23 @@ namespace HumanResourceInformationSystem.View
                 MainView._staffDetailView.showStaffDetail();
             }
 
+        }
+
+        // show certain staff by staff id
+        public void focusSelectedStaff(int id)
+        {
+            //set catogery selection to all
+            comboBoxCategory.SelectedIndex = 0;
+
+            //find the specific staff by id
+            for (int i = 0; i < staffListView.Items.Count; i++)
+            {
+                Staff staff = (Staff)staffListView.Items[i].Tag;
+                if (staff.Id == id)
+                {
+                    staffListView.Items[i].Selected = true;
+                }
+            }
         }
     }
 }

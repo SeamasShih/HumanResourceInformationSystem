@@ -35,6 +35,8 @@ namespace HumanResourceInformationSystem.Controller
                     return Classes;
                 case Campus.Hobart:
                 case Campus.Launceston:
+                    if (Classes == null)
+                        return null;
                     var list = Classes.Where(c => c.Campus == campus).Select(c => c);
                     List<Class> cla = new List<Class>();
                     foreach (Class c in list)

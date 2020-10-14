@@ -69,5 +69,12 @@ namespace HumanResourceInformationSystem.View
             mainTabControl.SelectedTab = tabPageUnits;
             unitListView.focusSelectedUnit(_unitCode);
         }
+
+        //change tab focus from unit page to staff page
+        public void changeUnitTabFocusByStaffID(int id)
+        {
+            mainTabControl.SelectedTab = tabPageStaff;
+            _staffListForm.focusSelectedStaff(id);
+        }
     }
 }

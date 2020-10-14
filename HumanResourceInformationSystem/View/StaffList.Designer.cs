@@ -42,7 +42,7 @@
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(111, 41);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(127, 21);
+            this.comboBoxCategory.Size = new System.Drawing.Size(127, 23);
             this.comboBoxCategory.TabIndex = 0;
             // 
             // buttonSearch
@@ -59,7 +59,7 @@
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(111, 13);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(127, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(127, 25);
             this.textBoxSearch.TabIndex = 2;
             // 
             // label2
@@ -68,7 +68,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(85, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Staff List";
             // 
@@ -88,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Category:";
             // 
@@ -97,9 +97,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Search by Name:";
+            this.label3.Text = "Search:";
             // 
             // StaffList
             // 

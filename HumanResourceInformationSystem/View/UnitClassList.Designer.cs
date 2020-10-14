@@ -64,6 +64,7 @@
             this.classListView.TabIndex = 2;
             this.classListView.UseCompatibleStateImageBehavior = false;
             this.classListView.View = System.Windows.Forms.View.Details;
+            this.classListView.Click += new System.EventHandler(this.classListView_Click);
             // 
             // labelListView
             // 

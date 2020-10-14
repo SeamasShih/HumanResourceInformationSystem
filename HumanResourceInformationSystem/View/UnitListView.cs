@@ -22,14 +22,19 @@ namespace HumanResourceInformationSystem.View
             loadView();
         }
 
+        // loadView when this view is called
         private void loadView()
         {
+            // set list view by retrieved unit list
             refreshListView(UnitController.getUnitList());
         }
 
+        //refresh list view by provided unit list
         private void refreshListView(List<Unit> units)
         {
+            //clear original list
             listUnit.Items.Clear();
+            //set new list
             foreach (Unit u in units)
             {
                 ListViewItem item = new ListViewItem();
@@ -52,12 +57,14 @@ namespace HumanResourceInformationSystem.View
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string text = textSearch.Text;
+            //refresh list view based on unit list which is gotten by search text
             refreshListView(UnitController.filterUnitByString(text));
         }
 
         private void textSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            //enable user can use enter key in the search text area
+            if (e.KeyCode == Keys.Enter)
                 btnSearch_Click(sender, e);
         }
 
@@ -65,6 +72,7 @@ namespace HumanResourceInformationSystem.View
         {
 
             ListView.SelectedListViewItemCollection collection = this.listUnit.SelectedItems;
+            //when a class in the list is selected, show relative classes
             if (collection.Count > 0)
             {
                 ListViewItem item = listUnit.SelectedItems[0];
@@ -73,15 +81,16 @@ namespace HumanResourceInformationSystem.View
             }
         }
 
+        //change focus to specific unit based on unit code
         public void focusSelectedUnit(string _unitCode)
         {
             loadView();
-            
-            for(int i=0; i<listUnit.Items.Count; i++)
+
+            for (int i = 0; i < listUnit.Items.Count; i++)
             {
-                Unit _unit = (Unit) listUnit.Items[i].Tag;
+                Unit _unit = (Unit)listUnit.Items[i].Tag;
                 //found unit code
-                if(_unit.Code == _unitCode)
+                if (_unit.Code == _unitCode)
                 {
                     listUnit.Items[i].Selected = true;
                 }
